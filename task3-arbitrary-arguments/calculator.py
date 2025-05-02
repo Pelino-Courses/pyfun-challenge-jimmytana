@@ -35,14 +35,14 @@ def calculate(*args,**kwargs):
     """
     if not all(isinstance(arg,int) for arg in args):
         raise TypeError("all arguments shuld be numbers.")
-    operation=kwargs.get('operation')
-    if operation =='add':
+    print("The kwargs are: ",kwargs)
+    if kwargs.get('add'):
         return add(*args)
-    elif operation=='substract':
+    elif kwargs.get('subtract'):
         return substract(*args)
-    elif operation=='multiply':
+    elif kwargs.get('multiply'):
         return multiply(*args)
-    elif operation=='divide':
+    elif kwargs.get('divide'):
         return divide(*args) 
     else :
         raise ValueError("invalid operation")
@@ -52,12 +52,41 @@ def calculate(*args,**kwargs):
     
 if __name__=="__main__":
     test_cases=[(10,5,2),(100,10),(8,2,0),('a',2)]
-    operations=['add','substract','multiply','divide']
+    operations = [
+        {
+        "add": False,
+        "subtract": True,
+        "multiply": False,
+        "divide": False,
+        
+    },
+        {
+        "add": True,
+        "subtract": False,
+        "multiply": False,
+        "divide": False,
+        
+    },
+        {
+        "add": False,
+        "subtract": False,
+        "multiply": False,
+        "divide": True,
+        
+    },
+        {
+        "add": False,
+        "subtract": False,
+        "multiply": True,
+        "divide": True,
+        
+    },
+    ]
     for op in operations:
         print("\noperation: {op}")
         for case in  test_cases:
             try :
-                result=calculate(*case,operation=op)
+                result=calculate(*case, **op)
                 print(f"calculate{case},operation='{op}=>{result}")
             except Exception as e:
                 print(F"Error with input{case}:{e}") 
