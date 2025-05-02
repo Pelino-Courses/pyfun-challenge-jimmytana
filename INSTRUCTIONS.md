@@ -31,7 +31,7 @@ python-skills-assessment/
 
 Create a Python script `date_calculator.py` that:
 - Imports the `datetime` module
-- Implements a function to calculate the difference between two dates in days
+- Implements a function to calctext_formatter.pyltext_formatter.pyulate the difference between two dates in days
 - Includes proper docstrings with examples
 - Handles potential errors when invalid date formats are provided
 
