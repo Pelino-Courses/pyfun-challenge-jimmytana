@@ -1,6 +1,6 @@
 """
     text_formatter.py
-    Asimple script that formats text in different ways.
+    A simple script that formats text in different ways.
 
     """
 def format_text(text,uppercase=False,lowercase=False,capitalized=False,strip=True,replace_newlines=True):
@@ -31,19 +31,19 @@ def format_text(text,uppercase=False,lowercase=False,capitalized=False,strip=Tru
     if capitalized:
      text=text.capitalize()
     return text 
-if __name__ == "__main__":
-    examples = [
-        "   Hello World!   ",
-        "hello\nworld",
-        123,  # Should trigger TypeError
-        "python"
-    ]
 
-    for item in examples:
-        print(f"Original: {item}")
-        try:
-            result = format_text(item, capitalize=True)
-            print("Formatted:", result)
-        except Exception as e:
-            print("Error:", e)
-        print("-" * 20)
+examples = [
+    "   Hello World!   ",
+    "hello\nworld",
+    123,  
+    "python"
+]
+
+for item in examples:
+    print(f"Original: {item}")
+    try:
+        result = format_text(item, capitalized=True)
+        print("Formatted:", result)
+    except Exception as e:
+        print("Error:", e)
+    print("-" * 20)
