@@ -45,7 +45,7 @@ class product:
         print(f"price:{self.price}")
         print(f"quantity:{self.quantity}")
         print(f"total invetory value:{self.total_value():.2f}")  
-a=product("tana",5,4)
+a=product(p1,p2,p3,p4,p5)
 a.add(5)
 a.remove(3)
 a.total_value()
