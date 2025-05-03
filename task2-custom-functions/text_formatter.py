@@ -3,16 +3,15 @@
     A simple script that formats text in different ways.
 
     """
-def format_text(text,uppercase=False,lowercase=False,capitalized=False,strip=True,replace_newlines=True):
+def format_text (text:str,prefix:str="",suffix:str="",capitalize : bool=False,max_length:int=None)->str:
     """
     parameters:
     formats the input based on what provided
     text(str):the text to be formated
-    uppercase(bool
-    lowercase(bool)
+    prefix(bool
+    suifix(bool)
     capitalized(bool)
     strip(bool)
-    replace_newlines(bool)
     returns:
     sttr:the formated text
     raises:
@@ -20,30 +19,26 @@ def format_text(text,uppercase=False,lowercase=False,capitalized=False,strip=Tru
     """
     if not isinstance(text,str):
      raise TypeError("the input must be a string")
-    if replace_newlines:
-      text=text.replace('\n',' ')
-    if strip:
-     text=text.strip()
-    if lowercase:
-     text=text.lower()
-    if uppercase:
-     text=text.upper()
-    if capitalized:
-     text=text.capitalize()
-    return text 
-
-examples = [
-    "   Hello World!   ",
-    "hello\nworld",
-    123,  
-    "python"
-]
-
-for item in examples:
-    print(f"Original: {item}")
-    try:
-        result = format_text(item, capitalized=True)
-        print("Formatted:", result)
-    except Exception as e:
-        print("Error:", e)
-    print("-" * 20)
+    if not isinstance(prefix,str):
+        raise TypeError("prefix must be a string")
+    if not isinstance(suffix,str):
+        raise TypeError("suffix must be  a string")
+    if max_length is not None:
+        if not isinstance(max_length,int):
+            raise TypeError("max_length must be an integer")
+        if max_length<=0:
+            raise ValueError("max_length must be a positive integer")
+    formatted=text.strip()
+    if capitalize:
+        formatted=formatted.capitalize()
+        formatted=f"{prefix}{formatted}{suffix}"
+        if max_length is not None:
+            formatted=formatted[:max_length]
+        return formatted
+ 
+ip = input("Please enter a text to format: ")
+prefix = input("Enter Prefix: ")
+suffix = input("Enter suffix: ")
+print(format_text(ip))
+print(format_text(ip,prefix=prefix,suffix=suffix,capitalize=True))        
+print(format_text("sampletext",max_length=8))
