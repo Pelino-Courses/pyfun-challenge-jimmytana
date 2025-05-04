@@ -28,20 +28,23 @@ print("------------------------------------")
 print("instructors")
 for instructor in instructors:
     print(instructor)
+    print("------------------------------------")
 print("------------------------------------")
 print("Courses")
 for course in courses:
     print(course)
+    print("------------------------------------")
     
 print("------------------------------------")
 print("enrollments")
 
 for student in students:
-    course = courses[randint(0, len(courses))]
+    course = courses[randint(0, len(courses)-1)]
     course_name = course.course_name
     course_id = course.course_id
     enrollments.append(Enrollment(student.id, student.name, student.age,student.sex, course_id, course_name, "2025-01-01"))
 
 for enrollment in enrollments:
     print(enrollment)
+    print("--------------------")
     
