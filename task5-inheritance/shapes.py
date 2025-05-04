@@ -1,13 +1,8 @@
 from math import pi,sqrt
 class shape:
-    """
-    Base class for all shapes
-    attribbutes:name
-    """
+  
     def __init__(self,name:str):
-        """
-        initialize the shape with name
-        """
+       
         if not isinstance(name,str):
             raise TypeError ("name must be a string.")
         self.name=name

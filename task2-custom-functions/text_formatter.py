@@ -1,22 +1,6 @@
-"""
-    text_formatter.py
-    A simple script that formats text in different ways.
 
-    """
 def format_text (text:str,prefix:str="",suffix:str="",capitalize : bool=False,max_length:int=None)->str:
-    """
-    parameters:
-    formats the input based on what provided
-    text(str):the text to be formated
-    prefix(bool
-    suifix(bool)
-    capitalized(bool)
-    strip(bool)
-    returns:
-    sttr:the formated text
-    raises:
-    TypeError:if input is not a string 
-    """
+   
     if not isinstance(text,str):
      raise TypeError("the input must be a string")
     if not isinstance(prefix,str):

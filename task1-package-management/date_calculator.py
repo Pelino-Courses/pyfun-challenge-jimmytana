@@ -1,11 +1,7 @@
 import datetime
-"""package management
-which will deals with dates difference
-"""
+
 def diference(date1,date2):
- """
-we nedd date 1,date2
-"""
+ 
  datediff=date2-date1
  return datediff.days
 

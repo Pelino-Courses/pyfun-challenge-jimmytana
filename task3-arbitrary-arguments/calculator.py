@@ -1,8 +1,4 @@
-""""
-calculator.py
-simple calculator that add,divide,substract,mulitply using *args,and **kwags.
 
-"""
 def add(*args):
     return sum(args)
 def substract(*args):
@@ -27,12 +23,7 @@ def divide(*args):
         result /=num
     return result
 def calculate(*args,**kwargs):
-    """" perform calculation on given numbers.
-    parameters:
-    *args
-    **kwargs
-    we need to add ,substract,divide and multiply
-    """
+    
     if not all(isinstance(arg,int) for arg in args):
         raise TypeError("all arguments shuld be numbers.")
     print("The kwargs are: ",kwargs)

@@ -59,7 +59,7 @@
 2. Implements specific shape classes (`Circle`, `Rectangle`, `Triangle`) that inherit from `Shape`
 3. Overrides methods appropriately for each shape (e.g., area calculation)
 4. Implements proper validation in each class's `__init__` method
-5. Includes a `__str__` method for human-readable representation of each shape
+5. Includes a `__str__` method for human-revadable representation of each shape
 6. Uses class methods where appropriate
 7. Documents all classes and methods with comprehensive docstrings
 

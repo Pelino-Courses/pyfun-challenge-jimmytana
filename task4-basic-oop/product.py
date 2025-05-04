@@ -2,16 +2,10 @@ from random import randint
 import collections
 
 class product:
-    """"
-    here we gona look our invetory management
-    """
+    
     def __init__(self,id:int, name:str,price:int,quantity:int):
-        """"
-        amoung the properties we have ther is :
-        name,price,quantity
-        while attributes ther is :
-        addd,remove,total value,display
-        """
+    
+        
         self.name=name
         self.id = id
         self.price=price
