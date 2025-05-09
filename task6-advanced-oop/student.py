@@ -1,4 +1,7 @@
 from person import Person
+"""
+student information
+"""
 class Student(Person):
     def __init__(self,student_id:int, student_name:str, student_age:int, student_sex:str):
         super().__init__(student_id, student_name, student_age, student_sex)
