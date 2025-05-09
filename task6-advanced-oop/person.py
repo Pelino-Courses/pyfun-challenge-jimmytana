@@ -1,4 +1,7 @@
 class Person:
+    """
+    person related details and validation for the iniputs
+    """
     def __init__(self,id,name,age,sex):
         self.id=id
         self.name=name
