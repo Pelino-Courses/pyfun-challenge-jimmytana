@@ -1,3 +1,7 @@
+"""
+as instructor is a person too we do need to import person
+"""
+
 from person import Person
 class Instructor(Person):
     def __init__(self, id, name, age, sex, instructor_course):
