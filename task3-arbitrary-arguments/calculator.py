@@ -1,7 +1,18 @@
-
+"""
+a calculator that performs basic arithmetic operation(addition,substraction,multiplication,division)
+using arbitray positional and keyword arguments.
+"""
 def add(*args):
+    """
+    returns the addition of arguments passed
+    """
+
+
     return sum(args)
 def substract(*args):
+    """
+    returns the difference of the entered areguments
+    """
     if len(args) < 2:
         raise ValueError("substraction needs two numbers.")
     result=args[0]
@@ -9,11 +20,17 @@ def substract(*args):
         result-=num
     return result
 def multiply(*args):
+    """
+    return the product of all arguments
+    """
     result=1
     for num in args:
         result*=num
     return result
 def divide(*args):
+    """
+    returns the result of division
+    """
     if len (args)<2:
         raise ValueError("divide needs at least two numbers.")
     result=args[0]
@@ -23,6 +40,12 @@ def divide(*args):
         result /=num
     return result
 def calculate(*args,**kwargs):
+    """
+    returns:float or int as the resurt of an arthimetic expression
+    raises value error if invalid operation is specified
+    raises type error if provided arguments are not number
+    zerodivisionerror if you divide an number with zero
+    """
     
     if not all(isinstance(arg,int) for arg in args):
         raise TypeError("all arguments shuld be numbers.")
