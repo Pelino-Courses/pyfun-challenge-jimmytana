@@ -1,4 +1,7 @@
 from student import Student
+"""
+here we need to import student detatails to meet with their course information
+"""
 class Course:
     def __init__(self, course_id, course_name):
         self.course_id = course_id
