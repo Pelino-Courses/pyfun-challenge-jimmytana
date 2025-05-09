@@ -1,4 +1,7 @@
 from math import pi,sqrt
+"""
+progrma to calculate area ,perimeter of diferent shapes
+"""
 class shape:
   
     def __init__(self,name:str):
@@ -7,11 +10,19 @@ class shape:
             raise TypeError ("name must be a string.")
         self.name=name
     def area(self):
+        """
+        calculate the area of the shape 
+        returns:
+        float:area of the shape
+        """
         raise NotImplementedError("subclasses must implement the are method")
 
     def __str__(self):
         return f"{self.name}"
 class Circle(shape):
+    """
+    calculates the area and perimeter of a circle
+    """
     def __init__(self,radius:float):
         super().__init__("circle")
         if radius<=0:
@@ -24,6 +35,9 @@ class Circle(shape):
     def __str__(self):
         return f"{self.name}(radius={self.radius})"
 class Rectangle(shape):
+    """
+    calculates the are and perimeter of rectangle
+    """
     def __init__(self, width:float,height=float):
         super().__init__("rectangle")
         if width<=0 or height<=0:
