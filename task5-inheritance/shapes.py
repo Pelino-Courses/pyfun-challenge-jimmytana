@@ -51,11 +51,11 @@ class Triangle(shape):
         return self.a+self.b+self.c
     def __str__(self):
         return f"{self.name}(a={self.a},b={self.b},c={self.c})"
-    @classmethod
-    shapes=[ 
-        Circle(5),
-        Rectangle(4,6),
-        Triangle(3,4,5),
-        ]
+    # @classmethod
+shapes=[ 
+    Circle(5),
+    Rectangle(4,6),
+    Triangle(3,4,5),
+    ]
 for shape in shapes:
     print(f"{shape}-> Area:{shape.area():.2f},perimeter:{shape.perimeter():.2f}")

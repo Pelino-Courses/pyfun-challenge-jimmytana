@@ -9,7 +9,7 @@ courses = []
 instructors = []
 enrollments = []
 genders = ["M", "F"]
-cor = ["Math601", "Physics001", "IT16602", "Web", "Electric"]
+cor = ["kiny601", "chem001", "IT16602", "ent", "Electric"]
 for i in range(1, 11):  # Create 10 students
     s = Student(student_id=i, student_name=f"Student{i}", student_age=18+i, student_sex="M" if i % 2 == 0 else "F")
     students.append(s)
@@ -24,18 +24,15 @@ for i in range(1, 11):  # Create 10 random courses
 print("Students")
 for student in students:
     print(student)
-print("------------------------------------")
+    
 print("instructors")
 for instructor in instructors:
     print(instructor)
-    print("------------------------------------")
-print("------------------------------------")
+
 print("Courses")
 for course in courses:
     print(course)
-    print("------------------------------------")
     
-print("------------------------------------")
 print("enrollments")
 
 for student in students:
@@ -46,5 +43,5 @@ for student in students:
 
 for enrollment in enrollments:
     print(enrollment)
-    print("--------------------")
+    
     
