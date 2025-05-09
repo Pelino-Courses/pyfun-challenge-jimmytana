@@ -1,3 +1,7 @@
+"""
+here we imported two files student and coursers so that we can be able to vie thier enrollment
+"""
+
 from student import Student
 from course import Course
 class Enrollment(Student, Course):
