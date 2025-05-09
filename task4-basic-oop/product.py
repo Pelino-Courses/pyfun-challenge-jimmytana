@@ -1,9 +1,20 @@
 from random import randint
 import collections
+"""
+defines the product class for inventory management
+"""
 
 class product:
     
     def __init__(self,id:int, name:str,price:int,quantity:int):
+        """
+        initializes a new product instance with validated inputs
+        args:
+        name(str),price(float),quantity(int)
+        
+        aises:
+        valueerror:if any iniput is invalid
+        """
     
         
         self.name=name
