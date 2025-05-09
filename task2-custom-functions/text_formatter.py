@@ -1,5 +1,13 @@
 
 def format_text (text:str,prefix:str="",suffix:str="",capitalize : bool=False,max_length:int=None)->str:
+    """
+    program to format text ented by the user
+    it will add both suffix,priffix to the text provided
+    and check for validation if the iniput is a string
+    
+    returns:
+    str:the formatted string
+    """
    
     if not isinstance(text,str):
      raise TypeError("the input must be a string")
