@@ -1,3 +1,5 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/1FUBMkxR)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=19392391)
 # pyfun-challenges-2025
 
 ## [Instructions](https://github.com/Pelino-Courses/pyfun-challenges-2025/blob/main/INSTRUCTIONS.md)
@@ -57,7 +59,7 @@
 2. Implements specific shape classes (`Circle`, `Rectangle`, `Triangle`) that inherit from `Shape`
 3. Overrides methods appropriately for each shape (e.g., area calculation)
 4. Implements proper validation in each class's `__init__` method
-5. Includes a `__str__` method for human-readable representation of each shape
+5. Includes a `__str__` method for human-revadable representation of each shape
 6. Uses class methods where appropriate
 7. Documents all classes and methods with comprehensive docstrings
 
