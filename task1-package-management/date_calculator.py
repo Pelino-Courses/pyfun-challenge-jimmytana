@@ -10,7 +10,7 @@ it will raise a value error if the entered date is in wrong format
 """
 def diference(date1,date2):
  """"
-    calculates the difference between twoo dates entered as string
+    calculates the  difference between twoo dates entered as string
  """
  
  datediff=date2-date1
